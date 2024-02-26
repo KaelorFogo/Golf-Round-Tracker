@@ -1,0 +1,30 @@
+@media only screen and (max-width: 600px) {
+  nav {
+    background-color: #333;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: #4CAF50;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .separator {
+    margin: 0 10px;
+    color: white;
+  }
+  
+  .welcome {
+    margin: auto;
+  }
+  
+  .logout {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+}
