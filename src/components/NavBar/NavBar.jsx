@@ -10,15 +10,15 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <Link to="/rounds/new" class="nav-link">
+      <Link to="/rounds/new" className="nav-link">
         New Round
       </Link>
-      <span class="separator">|</span>
-      <Link to="/rounds" class="nav-link">
+      <span className="separator">|</span>
+      <Link to="/rounds" className="nav-link">
         Your Rounds
       </Link>
-      <span class="welcome">Welcome, {user.name}</span>
-      <Link to="" class="logout" onClick={handleLogOut}>
+      <span className="welcome">Welcome, {user.name}</span>
+      <Link to="" className="logout" onClick={handleLogOut}>
         Log Out
       </Link>
     </nav>

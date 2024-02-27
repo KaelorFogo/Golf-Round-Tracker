@@ -3,8 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import { getUser } from "../../utilities/users-service";
 import "./App.css";
 import AuthPage from "../AuthPage/AuthPage";
-import Rounds from "../Rounds/Rounds";
-import OrderHistoryPage from "../NewRound/NewRound";
+import Rounds from "../RoundsPage/RoundsPage";
+import NewRoundPage from "../NewRoundPage/NewRoundPage";
 import NavBar from "../../components/NavBar/NavBar";
 
 export default function App() {
@@ -18,7 +18,7 @@ export default function App() {
           <Routes>
             {/* Route components in here */}
             <Route path="/rounds" element={<Rounds />} />
-            <Route path="/rounds/new" element={<OrderHistoryPage />} />
+            <Route path="/rounds/new" element={<NewRoundPage />} />
           </Routes>
         </>
       ) : (

@@ -2,6 +2,7 @@ const Rounds = require("../../models/round");
 
 module.exports = {
   create,
+  getAllRoundsForuser,
 };
 
 async function create(req, res) {
@@ -11,4 +12,9 @@ async function create(req, res) {
     console.log(req.body);
     res.status(400).json(err);
   }
+}
+
+async function getAllRoundsForuser(req, res){
+    const userRounds = await Rounds.find({ user: req.user._id });
+    res.json(userRounds);
 }
