@@ -1,4 +1,5 @@
 import { checkToken } from '../../utilities/users-service';
+import NewRoundForm  from '../../components/NewRoundForm/NewRoundForm'
 
 export default function OrderHistoryPage() {
   async function handleCheckToken() {
@@ -9,7 +10,7 @@ export default function OrderHistoryPage() {
   return (
     <>
       <h1>New Round</h1>
-      <button onClick={handleCheckToken}>Check When My Login Expires</button>
+      <NewRoundForm />
     </>
   );
 }
