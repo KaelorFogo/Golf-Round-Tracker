@@ -8,6 +8,7 @@ module.exports = {
 async function create(req, res) {
   try {
     const round = await Rounds.create({...req.body, user: req.user._id});
+    res.json(round);
   } catch (err) {
     res.status(400).json(err);
   }

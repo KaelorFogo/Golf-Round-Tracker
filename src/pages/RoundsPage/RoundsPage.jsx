@@ -3,7 +3,7 @@ import * as roundAPI from "../../utilities/rounds-api";
 import RoundCard from "../../components/RoundCard/RoundCard";
 import "./RoundPage.css";
 
-export default function NewOrderPage() {
+export default function RoundPage() {
   const [rounds, setRounds] = useState(null);
 
   useEffect(() => {
