@@ -1,30 +1,38 @@
 import { useEffect, useState } from "react";
 import { newRound } from "../../utilities/rounds-api";
+import { getCourse } from "../../utilities/courses-api";
 
 export default function NewRoundForm() {
   const [score, setScore] = useState("");
   const [course, setCourse] = useState("");
   const [notes, setNotes] = useState("");
   const [date, setDate] = useState("");
-  
-  useEffect(()=>{
+
+  useEffect(() => {
     const currentDate = new Date().toISOString().slice(0, 10);
     setDate(currentDate);
   }, []);
 
-  const handleSubmit = async (evt) => {
-    evt.preventDefault();
-    const formData = { date, course, score, notes };
-    try {
-      const round = await newRound(formData);
-    } catch (err){
-      console.log(err);
-    }
-    setScore('');
-    setCourse('');
-    setNotes('');
+  const handleCourseAPI = async () => {
+    const courseApi = await getCourse(course);
+    return courseApi;
   };
   
+  const handleSubmit = async (evt) => {
+    evt.preventDefault();
+    const course = await handleCourseAPI();
+    try {
+      const formData = { date, course, score, notes };
+      console.log(formData);
+      await newRound(formData);
+    } catch (err) {
+      console.log(err);
+    }
+    setScore("");
+    setCourse("");
+    setNotes("");
+  };
+
   return (
     <form onSubmit={handleSubmit}>
       <label>Date</label>
