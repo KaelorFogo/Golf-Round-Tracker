@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import * as roundAPI from "../../utilities/rounds-api";
+import RoundCard from "../../components/RoundCard/RoundCard";
+import "./RoundPage.css";
 
 export default function NewOrderPage() {
   const [rounds, setRounds] = useState(null);
@@ -18,17 +20,19 @@ export default function NewOrderPage() {
   }, []);
 
   return (
-    <>
+    <div className="RoundPage">
       <h1>Your Rounds</h1>
-      {rounds ? (
-        <ul>
-          {rounds.map((round) => (
-            <li key={round._id}>{round.course}</li>
-          ))}
-        </ul>
-      ) : (
-        <p>Loading...</p>
-      )}
-    </>
+      <div className="ScoreCard">
+        {rounds ? (
+          <ul>
+            {rounds.map((round) => (
+              <RoundCard key={round._id} round={round} />
+            ))}
+          </ul>
+        ) : (
+          <p>No Rounds played yet...</p>
+        )}
+      </div>
+    </div>
   );
 }

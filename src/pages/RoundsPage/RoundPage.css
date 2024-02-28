@@ -1,0 +1,8 @@
+.ScoreCard {
+  display: flex;
+  justify-content: center; 
+}
+
+.RoundPage{
+  text-align: center;
+}
