@@ -18,7 +18,9 @@ export default function NewRoundForm({selectedCourse}) {
   const handleSubmit = async (evt) => {
     evt.preventDefault();
     try {
+      let course = selectedCourse;
       const formData = { date, course, score, notes };
+      console.log(selectedCourse);
       await newRound(formData);
     } catch (err) {
       console.log(err);

@@ -6,7 +6,7 @@ import AuthPage from "../AuthPage/AuthPage";
 import Rounds from "../RoundsPage/RoundsPage";
 import NewRoundPage from "../NewRoundPage/NewRoundPage";
 import NavBar from "../../components/NavBar/NavBar";
-import NewRoundForm from '../../components/NewRoundForm/NewRoundForm'
+import LandingPage from "../LandingPage/LandingPage";
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -18,6 +18,7 @@ export default function App() {
           <NavBar className="NavBar" user={user} setUser={setUser} />
           <Routes>
             {/* Route components in here */}
+            <Route path="/" element={<LandingPage user={user.name}/>} />
             <Route path="/rounds" element={<Rounds />} />
             <Route path="/rounds/new" element={<NewRoundPage />} />
           </Routes>

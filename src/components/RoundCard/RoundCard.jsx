@@ -6,7 +6,7 @@ export default function RoundCard({ round }) {
   return (
     <div className="card">
       <div className="card-content">
-        <h2 className="course-name">Course: {round.course[0].name}</h2>
+        <h2 className="course-name">Course: {round.course.name}</h2>
         <p className="player-score">Date: {date}</p>
       </div>
     </div>

@@ -1,0 +1,15 @@
+.landing-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.landing-page-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.landing-page-text {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
