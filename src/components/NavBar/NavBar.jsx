@@ -18,6 +18,10 @@ export default function NavBar({ user, setUser }) {
         <Link to="/rounds" className="nav-link">
           Past Rounds
         </Link>
+        <span className="separator">|</span>
+        <Link to="/handicap" className="nav-link">
+          Your Handicap
+        </Link>
       </div>
       <span className="welcome">Welcome, {user.name}</span>
       <Link to="" className="logout" onClick={handleLogOut}>
