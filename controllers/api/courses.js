@@ -4,7 +4,6 @@ module.exports = {
 
 async function getCourse(req, res) {
   const name = encodeURIComponent(req.params.name);
-  //why does name get logged before the get request even comes in the console
   const url = `https://golf-course-api.p.rapidapi.com/search?name=${name}`; 
   const options = {
     method: "GET",

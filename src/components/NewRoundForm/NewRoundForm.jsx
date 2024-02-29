@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { newRound } from "../../utilities/rounds-api";
 import { getCourse } from "../../utilities/courses-api";
 
-export default function NewRoundForm() {
+
+export default function NewRoundForm({selectedCourse}) {
   const [score, setScore] = useState("");
   const [course, setCourse] = useState("");
   const [notes, setNotes] = useState("");
@@ -12,18 +14,11 @@ export default function NewRoundForm() {
     const currentDate = new Date().toISOString().slice(0, 10);
     setDate(currentDate);
   }, []);
-
-  const handleCourseAPI = async () => {
-    const courseApi = await getCourse(course);
-    return courseApi;
-  };
   
   const handleSubmit = async (evt) => {
     evt.preventDefault();
-    const course = await handleCourseAPI();
     try {
       const formData = { date, course, score, notes };
-      console.log(formData);
       await newRound(formData);
     } catch (err) {
       console.log(err);
@@ -51,7 +46,7 @@ export default function NewRoundForm() {
         id="course"
         name="course"
         required
-        value={course}
+        value={selectedCourse.name}
         onChange={(e) => setCourse(e.target.value)}
       />
 

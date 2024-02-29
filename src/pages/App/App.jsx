@@ -6,6 +6,7 @@ import AuthPage from "../AuthPage/AuthPage";
 import Rounds from "../RoundsPage/RoundsPage";
 import NewRoundPage from "../NewRoundPage/NewRoundPage";
 import NavBar from "../../components/NavBar/NavBar";
+import NewRoundForm from '../../components/NewRoundForm/NewRoundForm'
 
 export default function App() {
   const [user, setUser] = useState(getUser());
