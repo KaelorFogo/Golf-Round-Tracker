@@ -3,24 +3,23 @@ import { useLocation } from "react-router-dom";
 import { newRound } from "../../utilities/rounds-api";
 import { getCourse } from "../../utilities/courses-api";
 
-
-export default function NewRoundForm({selectedCourse}) {
+export default function NewRoundForm({ selectedCourse }) {
   const [score, setScore] = useState("");
   const [course, setCourse] = useState("");
   const [notes, setNotes] = useState("");
   const [date, setDate] = useState("");
+  const [teeBox, setTeeBox] = useState(selectedCourse.teeBoxes[0].tee);
 
   useEffect(() => {
     const currentDate = new Date().toISOString().slice(0, 10);
     setDate(currentDate);
   }, []);
-  
+
   const handleSubmit = async (evt) => {
     evt.preventDefault();
     try {
       let course = selectedCourse;
-      const formData = { date, course, score, notes };
-      console.log(selectedCourse);
+      const formData = { date, course, teeBox, score, notes };
       await newRound(formData);
     } catch (err) {
       console.log(err);
@@ -29,6 +28,12 @@ export default function NewRoundForm({selectedCourse}) {
     setCourse("");
     setNotes("");
   };
+
+  const teeBoxOption = selectedCourse.teeBoxes.map((teeBox) => (
+    <option key={teeBox.tee} value={teeBox.tee}>
+      {teeBox.tee}
+    </option>
+  ));
 
   return (
     <form onSubmit={handleSubmit}>
@@ -51,6 +56,16 @@ export default function NewRoundForm({selectedCourse}) {
         value={selectedCourse.name}
         onChange={(e) => setCourse(e.target.value)}
       />
+
+      <label htmlFor="teeBox"></label>
+      <select
+        id="teeBox"
+        name="teeBox"
+        required
+        onChange={(e) => setTeeBox(e.target.value)}
+      >
+        {teeBoxOption}
+      </select>
 
       <label htmlFor="score">Score</label>
       <input

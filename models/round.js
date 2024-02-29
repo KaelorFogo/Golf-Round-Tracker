@@ -112,6 +112,7 @@ const roundSchema = new Schema({
       },
     },
   },
+  teeBox: { type: String, required: true },
   score: { type: Number, required: true },
   notes: { type: String, required: false },
   user: {
