@@ -20,19 +20,21 @@ export default function RoundPage() {
   }, []);
 
   return (
-    <div className="RoundPage">
-      <h1>Your Rounds</h1>
-      <div className="ScoreCard">
-        {rounds ? (
-          <ul>
-            {rounds.map((round) => (
-              <RoundCard key={round._id} round={round} />
-            ))}
-          </ul>
-        ) : (
-          <p>No Rounds played yet...</p>
-        )}
+    <>
+      <div className="RoundPage">
+        <h1>Your Rounds</h1>
+        <div className="ScoreCard">
+          {rounds ? (
+            <ul>
+              {rounds.map((round) => (
+                <RoundCard key={round._id} round={round} />
+              ))}
+            </ul>
+          ) : (
+            <p>No Rounds played yet...</p>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

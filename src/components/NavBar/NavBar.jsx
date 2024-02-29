@@ -9,14 +9,14 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <nav>
-      <div className='Links'>
+    <nav className="nav-bar">
+      <div className="nav-left">
         <Link to="/rounds/new" className="nav-link">
           New Round
         </Link>
         <span className="separator">|</span>
         <Link to="/rounds" className="nav-link">
-          Your Rounds
+          Past Rounds
         </Link>
       </div>
       <span className="welcome">Welcome, {user.name}</span>

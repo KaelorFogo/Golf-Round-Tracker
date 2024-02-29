@@ -1,27 +1,43 @@
-  nav {
-    background-color: #333;
-    padding: 10px;
-    color: white;
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-link {
-    color: #4CAF50;
-    text-decoration: none;
-    margin-right: 10px;
-  }
-  
-  .separator {
-    margin: 0 10px;
-    color: white;
-  }
-  
-  .welcome {
-    margin: auto;
-  }
-  
-  .logout {
-    color: #4CAF50;
-    text-decoration: none;
-  }
+.nav-bar {
+  background-color: #81c784; /* Green color for golf theme */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff; /* White text color */
+  text-decoration: none;
+  padding: 8px 12px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.separator {
+  color: #fff; /* White text color */
+}
+
+.welcome {
+  color: #000; /* White text color */
+  padding-right: 150px;
+  margin-right: 10px;
+}
+
+.logout {
+  color: #fff; /* White text color */
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #fff; /* White border */
+  border-radius: 5px;
+}
+
+.logout:hover {
+  background-color: #fff; /* White background color on hover */
+  color: #81c784; /* Green text color on hover */
+}

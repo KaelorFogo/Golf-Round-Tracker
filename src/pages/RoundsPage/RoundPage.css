@@ -1,8 +1,27 @@
 .ScoreCard {
   display: flex;
   justify-content: center; 
+  padding: 20px;
+  text-align: center;
 }
 
-.RoundPage{
-  text-align: center;
+.RoundPage h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.ScoreCard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.ScoreCard ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ScoreCard p {
+  color: #666;
 }
