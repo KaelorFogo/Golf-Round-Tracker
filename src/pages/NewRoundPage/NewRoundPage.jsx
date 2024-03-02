@@ -1,5 +1,5 @@
 import { getCourse } from "../../utilities/courses-api";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./NewRoundPage.css";
 import NewRoundForm from "../../components/NewRoundForm/NewRoundForm";
 

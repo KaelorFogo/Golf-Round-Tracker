@@ -1,14 +1,16 @@
 import "./RoundCard.css";
+import { Link } from "react-router-dom";
 
 export default function RoundCard({ round }) {
-  const date = new Date(round.date).toLocaleDateString();
 
   return (
-    <div className="card">
-      <div className="card-content">
-        <h2 className="course-name">Course: {round.course.name}</h2>
-        <p className="player-score">Date: {date}</p>
+    <Link to={`${round._id}`}>
+      <div className="card">
+        <div className="card-content">
+          <h2 className="course-name">Course: {round.course.name}</h2>
+          <p className="player-score">Date: {new Date(round.date).toLocaleDateString('en-US')}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }

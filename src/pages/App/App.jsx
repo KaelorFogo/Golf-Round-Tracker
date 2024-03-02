@@ -8,6 +8,7 @@ import NewRoundPage from "../NewRoundPage/NewRoundPage";
 import NavBar from "../../components/NavBar/NavBar";
 import LandingPage from "../LandingPage/LandingPage";
 import HandicapPage from "../HandicapPage/HandicapPage";
+import RoundDetailPage from "../RoundDetailPage/RoundDetailPage";
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -22,6 +23,7 @@ export default function App() {
             <Route path="/" element={<LandingPage user={user.name}/>} />
             <Route path="/rounds" element={<Rounds />} />
             <Route path="/rounds/new" element={<NewRoundPage />} />
+            <Route path="/rounds/:id" element={<RoundDetailPage />}/>
             <Route path="/handicap" element={<HandicapPage key={user._id}/>} />
           </Routes>
         </>

@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import { newRound } from "../../utilities/rounds-api";
-import { getCourse } from "../../utilities/courses-api";
 
 export default function NewRoundForm({ selectedCourse }) {
   const [score, setScore] = useState("");

@@ -7,4 +7,8 @@ router.post('/', roundsCtrl.create);
 
 router.get('/', roundsCtrl.getAllRoundsForuser);
 
+router.get('/:id', roundsCtrl.show);
+
+router.delete('/:id', roundsCtrl.deleteById);
+
 module.exports = router;
