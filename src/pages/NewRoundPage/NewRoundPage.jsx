@@ -39,7 +39,7 @@ export default function NewRoundPage() {
         <NewRoundForm selectedCourse={selectedCourse} />
       ) : (
         <>
-          <h1>New Round</h1>
+          <h1 className="newRound">New Round</h1>
           <form onSubmit={handleSubmit}>
             <label>Course name: </label>
             <input

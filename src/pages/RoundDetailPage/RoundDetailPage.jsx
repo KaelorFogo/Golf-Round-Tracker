@@ -28,10 +28,10 @@ export default function RoundDetailPage() {
     <>
       {round ? (
         <>
-          <p className="player-score">
+          <p>
             Date: {new Date(round.date).toLocaleDateString("en-US")}
           </p>
-          <h1>Course Name: {round.course.name}</h1>
+          <h1 className="courseName">Course Name: {round.course.name}</h1>
           <h2>Score: {round.score}</h2>
           <h3>Tee's played: {round.teeBox}</h3>
 

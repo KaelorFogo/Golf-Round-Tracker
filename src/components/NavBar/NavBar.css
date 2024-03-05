@@ -1,14 +1,15 @@
 .nav-bar {
   background-color: #81c784; 
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
   align-items: center;
 }
 
 .nav-left {
   display: flex;
   align-items: center;
+  grid-column: 1;
 }
 
 .nav-link {
@@ -26,6 +27,8 @@
 .welcome {
   color: #000; 
   margin-right: 10px;
+  grid-column: 2;
+
 }
 
 .logout {
@@ -33,7 +36,10 @@
   text-decoration: none;
   padding: 8px 12px;
   border: 1px solid #fff; 
+  width: 150px;
   border-radius: 5px;
+  grid-column: 3;
+  justify-self: end;
 }
 
 .logout:hover {

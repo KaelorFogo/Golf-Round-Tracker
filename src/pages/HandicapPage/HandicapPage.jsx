@@ -1,5 +1,6 @@
 import * as roundAPI from "../../utilities/rounds-api";
 import { useEffect, useState } from "react";
+import "./HandicapPage.css"
 
 export default function HandicapPage() {
   const [rounds, setRounds] = useState(null);
@@ -60,11 +61,11 @@ export default function HandicapPage() {
   
 
   return (
-    <>
-      <h1>Your</h1>
+    <div>
+      <h2>Your</h2>
       <h5>(estimated)</h5>
-      <h1>Handicap</h1><br />
+      <h2 className="handicap">Handicap</h2><br />
       <h1 className="handicapNum">{handicapIndex() > 0 ? '+' : '' }{Math.floor(handicapIndex() * 10) / 10}</h1>
-    </>
+    </div>
   );
 }
