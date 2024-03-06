@@ -61,7 +61,7 @@ export default function HandicapPage() {
   
 
   return (
-    <div>
+    <div className="handicapPage">
       <h2>Your</h2>
       <h5>(estimated)</h5>
       <h2 className="handicap">Handicap</h2><br />

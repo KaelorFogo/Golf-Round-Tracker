@@ -6,7 +6,6 @@ export default function AuthPage({ setUser }) {
   const [showSignUp, setShowSignUp] = useState(false);
   return (
     <main className="auth-page">
-      <h1>Welcome to Birdie Tracker</h1>
       <button onClick={() => setShowSignUp(!showSignUp)}>
         {showSignUp ? "Log In" : "Sign Up"}
       </button>
