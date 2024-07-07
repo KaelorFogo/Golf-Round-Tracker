@@ -11,6 +11,10 @@ export default function NavBar({ user, setUser }) {
   return (
     <nav className="nav-bar">
       <div className="nav-left">
+      <Link to="/" className="nav-link">
+          Home
+        </Link>
+        <span className="separator">|</span>
         <Link to="/rounds/new" className="nav-link">
           New Round
         </Link>

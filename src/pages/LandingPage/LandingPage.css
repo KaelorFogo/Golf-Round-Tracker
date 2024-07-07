@@ -8,6 +8,21 @@
   margin-bottom: 20px;
 }
 
+.landing-page-link{
+  position: relative;
+  top: 40px;
+  color: #fff; 
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #fff; 
+  width: 150px;
+  border-radius: 5px;
+}
+
+.landing-page-link:hover{
+  background-color: #fff; 
+  color: #81c784; }
+
 .logo{
   padding-top: 15px;
   width: 10%;

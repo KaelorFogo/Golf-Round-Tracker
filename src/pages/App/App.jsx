@@ -20,7 +20,6 @@ export default function App() {
         <>
           <NavBar className="NavBar" user={user} setUser={setUser} />
           <Routes>
-            {/* Route components in here */}
             <Route path="/" element={<LandingPage user={user.name} />} />
             <Route path="/rounds" element={<Rounds />} />
             <Route path="/rounds/new" element={<NewRoundPage />} />
