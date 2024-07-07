@@ -1,5 +1,4 @@
 .nav-bar {
-  background-color: #81c784; 
   padding: 10px;
   grid-template-columns: repeat(3, 1fr);
   display: grid;
@@ -18,6 +17,10 @@
   padding: 8px 12px;
   margin-right: 10px;
   font-weight: bold;
+}
+
+.nav-link:hover{
+  color: #81c784; 
 }
 
 .separator {

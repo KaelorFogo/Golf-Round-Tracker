@@ -8,6 +8,12 @@
   margin-bottom: 20px;
 }
 
+.logo{
+  padding-top: 15px;
+  width: 10%;
+  height: 10%;
+}
+
 .landing-page-text {
   font-size: 1.2rem;
   margin-bottom: 10px;
