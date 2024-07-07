@@ -11,8 +11,8 @@ export default function NavBar({ user, setUser }) {
   return (
     <nav className="nav-bar">
       <div className="nav-left">
-      <Link to="/" className="nav-link">
-          Home
+      <Link to="/" className="nav-link-home">
+      <img className="nav-logo" src="https://i.imgur.com/QlddchK.png" title="source: imgur.com" />
         </Link>
         <span className="separator">|</span>
         <Link to="/rounds/new" className="nav-link">

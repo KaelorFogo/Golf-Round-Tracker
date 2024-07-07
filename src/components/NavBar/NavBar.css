@@ -19,6 +19,11 @@
   font-weight: bold;
 }
 
+.nav-logo{
+  width: 50px;
+  padding-right: 10px;
+}
+
 .nav-link:hover{
   color: #81c784; 
 }
