@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import * as roundAPI from "../../utilities/rounds-api";
 import RoundCard from "../../components/RoundCard/RoundCard";
 import "./RoundPage.css";
+import { Link } from "react-router-dom";
 
 export default function RoundPage() {
   const [rounds, setRounds] = useState(null);
@@ -26,6 +27,9 @@ export default function RoundPage() {
         <div className="ScoreCard">
           {rounds ? (
             <ul>
+              <Link to="/rounds/new" className="round-new-round">
+                Create New Round
+              </Link>
               {rounds.map((round) => (
                 <RoundCard key={round._id} round={round} />
               ))}

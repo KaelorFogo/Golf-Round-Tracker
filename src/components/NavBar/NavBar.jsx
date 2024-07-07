@@ -15,12 +15,8 @@ export default function NavBar({ user, setUser }) {
       <img className="nav-logo" src="https://i.imgur.com/QlddchK.png" title="source: imgur.com" />
         </Link>
         <span className="separator">|</span>
-        <Link to="/rounds/new" className="nav-link">
-          New Round
-        </Link>
-        <span className="separator">|</span>
         <Link to="/rounds" className="nav-link">
-          Past Rounds
+          Rounds
         </Link>
         <span className="separator">|</span>
         <Link to="/handicap" className="nav-link">
