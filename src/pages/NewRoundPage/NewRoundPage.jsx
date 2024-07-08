@@ -21,7 +21,7 @@ export default function NewRoundPage() {
   };
 
   const CourseOptions = courseOptions.map((course) => (
-    <button onClick={() => setSelectedCourse(course)}>
+    <button className="courseSelect" onClick={() => setSelectedCourse(course)}>
       <div className="newCard" key={course._id}>
         <div className="newCard-content">
           <h2>{course.name}</h2>
